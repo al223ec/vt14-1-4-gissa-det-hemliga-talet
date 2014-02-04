@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SecretNumber.Default" ViewStateMode="Disabled" %>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -24,6 +25,9 @@
             </div>
             <%--Output--%>
             <asp:Panel ID="OutputPanel" runat="server" Visible="false">
+                <p>
+                    <asp:Literal ID="GuessedNumbersLiteral" runat="server">Redan gissade tal: {0}</asp:Literal>
+                </p>
                 <p>
                     <asp:Literal ID="OutputLiteral" runat="server"></asp:Literal>
                 </p>
