@@ -50,11 +50,15 @@ namespace SecretNumber.Model
         {
             _previousGuesses = new List<int>();
             Number = new Random().Next(1, 101);
-            Outcome = Model.Outcome.Indefinite;
+            Outcome = Outcome.Indefinite;
         }
 
         public Outcome MakeGuess(int guessedNumber)
         {
+            if (Count >= MaxNumberOfGuesses)//Ganska onödigt egentligen...eller?
+            {
+                return Outcome = Outcome.NoMoreGuesses;
+            }
             if (guessedNumber < 1 || guessedNumber > 100)
             {
                 throw new ArgumentOutOfRangeException();
@@ -83,6 +87,12 @@ namespace SecretNumber.Model
             }
             return Outcome;
         }
+        //public static string getEnumResourceString(Enum value)
+        //{
+        //    System.Reflection.FieldInfo fi = value.GetType().GetField(value.ToString());
+        //    EnumResourceAttribute attr = (EnumResourceAttribute)System.Attribute.GetCustomAttribute(fi, typeof(EnumResourceAttribute));
+        //    return (string)HttpContext.GetGlobalResourceObject(attr.BaseName, attr.Key);
+        //}
     }
     public enum Outcome
     {
@@ -90,7 +100,29 @@ namespace SecretNumber.Model
         Low,
         High,
         Correct,
-        NoMoreGuesses,
+        NoMoreGuesses, 
         PreviousGuess
+    }
+}
+
+public static class ErrorLevelExtensions
+{
+    public static string toTextString(this SecretNumber.Model.Outcome outcome)
+    {
+        switch (outcome)
+        {
+            case SecretNumber.Model.Outcome.Low:
+                return "Denna gissning var för låg";
+            case SecretNumber.Model.Outcome.High:
+                return "Denna gissning var för hög";
+            case SecretNumber.Model.Outcome.Correct:
+                return "Du gissade rätt!!";
+            case SecretNumber.Model.Outcome.PreviousGuess:
+                return "Detta tal har du gissat på förut!";
+            case SecretNumber.Model.Outcome.NoMoreGuesses:
+                return "Du har förbrukat alla dina gissningar";
+            default:
+                throw new ArgumentException();
+        }
     }
 }

@@ -49,22 +49,22 @@ namespace SecretNumber {
         protected global::System.Web.UI.WebControls.TextBox GuessTextBox;
         
         /// <summary>
-        /// RequiredFieldValidator3 control.
+        /// RequiredFieldValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator;
         
         /// <summary>
-        /// RangeValidator1 control.
+        /// RangeValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator1;
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator;
         
         /// <summary>
         /// OutputPanel control.
@@ -101,5 +101,23 @@ namespace SecretNumber {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button GuessButton;
+        
+        /// <summary>
+        /// restartPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel restartPanel;
+        
+        /// <summary>
+        /// RestartButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button RestartButton;
     }
 }

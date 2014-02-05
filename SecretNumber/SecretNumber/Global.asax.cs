@@ -13,16 +13,16 @@ namespace SecretNumber
 
         protected void Application_Start(object sender, EventArgs e)
         {
-          var jQuery = new ScriptResourceDefinition
-          {
-              Path = "/Scripts/jquery-2.1.0.min.js",
-              DebugPath = "/Scripts/jquery-2.1.0.js",
-              CdnPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js",
-              CdnDebugPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.js",
-              CdnSupportsSecureConnection = true,
-              LoadSuccessExpression = "jQuery"
-          };
-          ScriptManager.ScriptResourceMapping.AddDefinition("jquery", jQuery);
+          //var jQuery = new ScriptResourceDefinition
+          //{
+          //    Path = "/Scripts/jquery-2.1.0.min.js",
+          //    DebugPath = "/Scripts/jquery-2.1.0.js",
+          //    CdnPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js",
+          //    CdnDebugPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.js",
+          //    CdnSupportsSecureConnection = true,
+          //    LoadSuccessExpression = "jQuery"
+          //};
+          //ScriptManager.ScriptResourceMapping.AddDefinition("jquery", jQuery);
         }
 
         protected void Session_Start(object sender, EventArgs e)
